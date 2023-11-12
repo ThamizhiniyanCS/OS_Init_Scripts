@@ -14,6 +14,7 @@ sudo apt update
 sudo apt install curl
 sudo apt-get install wget gpg
 sudo apt install apt-transport-https
+sudo apt install golang chromium-driver
 
 # Checking whether ~/.bashrc is available, if not creating ~/.bashrc file
 if [ -f "$HOME/.bashrc" ]; then echo "~/.bashrc already exists."; else touch $HOME/.bashrc; fi
@@ -117,6 +118,17 @@ echo "apikeys:
     key: oCiMsgM6rQWqiTvPxFHYcExlZgg7wvTt
 " > $HOME/.theHarvester/api-keys.yaml
 python3 -m pip install -r requirements/base.txt
+
+# WayBackURLS Installation
+go install github.com/tomnomnom/waybackurls@latest
+
+# Aquatone Installation
+go get github.com/michenriksen/aquatone
+
+# FFUF Installation
+cd $TEMPORARY_DIRECTORY
+git clone https://github.com/ffuf/ffuf ; cd ffuf ; go get ; go build -buildvcs=false
+cd $TEMPORARY_DIRECTORY
 
 # Uninstall Opera Browser
 # sudo apt autoremove opera-stable --purge
