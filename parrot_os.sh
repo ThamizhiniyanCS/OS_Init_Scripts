@@ -20,7 +20,7 @@ if [ -f "$HOME/.bashrc" ]; then echo "~/.bashrc already exists."; else touch $HO
 
 # Aliases
 declare -a ALIASES=(
-[0]='theharvester=docker run --rm -it --mount type=bind,source="$HOME/.theHarvester/api-keys.yaml",target="/app/api-keys.yaml" --entrypoint "/app/theHarvester.py" theharvester'
+[0]='theharvester=python3 /opt/theHarvester/theHarvester.py'
 [1]='rustscan=docker run -it --rm --name rustscan rustscan/rustscan:2.1.1'
 )
 
@@ -93,7 +93,7 @@ sudo apt install docker.io docker-compose
 docker login -u $DOCKER_HUB_USERNAME -p $DOCKER_HUB_PASSWORD
 
 # TheHarvester installation using docker
-cd $TEMPORARY_DIRECTORY
+cd /opt
 git clone https://github.com/theHarvester/theHarvester.git
 cd theHarvester
 mkdir $HOME/.theHarvester
@@ -116,7 +116,7 @@ echo "apikeys:
   shodan:
     key: oCiMsgM6rQWqiTvPxFHYcExlZgg7wvTt
 " > $HOME/.theHarvester/api-keys.yaml
-docker build -t theharvester .
+python3 -m pip install -r requirements/base.txt
 
 # Uninstall Opera Browser
 # sudo apt autoremove opera-stable --purge
