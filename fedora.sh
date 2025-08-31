@@ -2,7 +2,7 @@
 
 # This script is made for Fedora. These commands apply to DNF5 only
 
-# --- START: HELPER FUNCTIONS START ---
+# --- START: HELPER FUNCTIONS ---
 info() {
   local message="$1"
   echo "[!] $message"
@@ -75,6 +75,12 @@ info "Update the package list"
 sudo dnf check-update
 # --- END: CREATING DIRECTORY FOR DOWNLOADING NECESSARY FILES AND UPDATING THE REPOSITORY ---
 
+# Name: rustup
+# Description: An installer for the systems programming language Rust
+# Website: https://rustup.rs/
+# Github Repository:
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 # --- START: GIT AND GITHUB RELATED STUFF ---
 # Name: Github CLI
 # Description: GitHub’s official command line tool
@@ -91,12 +97,18 @@ install gh --repo gh-cli
 install git-delta
 # --- END: GITHUB RELATED STUFF ---
 
-# --- START: NVIM AND RELATED STUFF ---
+# --- START: NVIM AND KITTY RELATED STUFF ---
 # Name: Neovim
 # Description: Vim-fork focused on extensibility and usability
 # Website: https://neovim.io/
 # Github Repository: https://github.com/neovim/neovim/
 install neovim python3-neovim
+
+# Name: Kitty
+# Description: The fast, feature-rich, GPU based terminal emulator
+# Website: https://sw.kovidgoyal.net/kitty/
+# Github Repository: https://github.com/kovidgoyal/kitty
+install kitty
 
 # Name: fzf
 # Description: A command-line fuzzy finder
@@ -122,7 +134,50 @@ install ripgrep
 # Website:
 # Github Repository: https://github.com/sharkdp/fd
 install fd-find
-# --- END: NVIM AND RELATED STUFF ---
+
+# Name: jq
+# Description: Command-line JSON processor
+# Website: https://jqlang.org/
+# Github Repository: https://github.com/jqlang/jq
+install jq
+
+# Name: Poppler
+# Description: Poppler is a PDF rendering library based on the xpdf-3.0 code base.
+# Website: https://poppler.freedesktop.org/
+# Gitlab Repository: https://gitlab.freedesktop.org/poppler/poppler
+install poppler
+
+# Name: Zoxide
+# Description: A smarter cd command. Supports all major shells.
+# Website: https://crates.io/crates/zoxide
+# Github Repository: https://github.com/ajeetdsouza/zoxide
+install zoxide
+
+# Name: resvg
+# Description: An SVG rendering library.
+# Website:
+# Github Repository: https://github.com/linebender/resvg
+cargo install resvg
+
+# Name: GraphicsMagick
+# Description: GraphicsMagick is the swiss army knife of image processing derived from ImageMagick
+# Website: http://www.graphicsmagick.org/index.html
+# Github Repository:
+install GraphicsMagick GraphicsMagick-devel GraphicsMagick-perl
+
+# Name: xclip
+# Description: Command line interface to the X11 clipboard
+# Website:
+# Github Repository: https://github.com/astrand/xclip
+install xclip
+
+# Name: Yazi
+# Description: Blazing fast terminal file manager written in Rust, based on async I/O.
+# Website: https://yazi-rs.github.io/
+# Github Repository: https://github.com/sxyazi/yazi
+copr_enable lihaohong/yazi
+install yazi
+# --- END: NVIM AND KITTY RELATED STUFF ---
 
 # Name: DangerZone
 # Description: Take potentially dangerous PDFs, office documents, or images and convert them to safe PDFs
@@ -156,23 +211,11 @@ install open-vm-tools-desktop
 # Github Repository: https://github.com/sharkdp/bat
 install bat
 
-# Name: xclip
-# Description: Command line interface to the X11 clipboard
-# Website:
-# Github Repository: https://github.com/astrand/xclip
-install xclip
-
 # Name: Fastfetch
 # Description: A maintained, feature-rich and performance oriented, neofetch like system information tool.
 # Website:
 # Github Repository: https://github.com/fastfetch-cli/fastfetch
 install fastfetch
-
-# Name: Kitty
-# Description: The fast, feature-rich, GPU based terminal emulator
-# Website: https://sw.kovidgoyal.net/kitty/
-# Github Repository: https://github.com/kovidgoyal/kitty
-install kitty
 
 # Name: Fish Shell
 # Description: fish is a smart and user-friendly command line shell for Linux, macOS, and the rest of the family.
@@ -237,13 +280,12 @@ sudo dnf swap mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
 # Hardware codecs with NVIDIA
 install libva-nvidia-driver.{i686,x86_64}
 
-# --- END: MULTIMEDIA STUFF ---
-
 # Name: VLC
 # Description: VLC is a free and open source cross-platform multimedia player
 # Website: https://docs.fedoraproject.org/en-US/quick-docs/installing-and-running-vlc/
 # Github Repository:
 install vlc
+# --- END: MULTIMEDIA STUFF ---
 
 # Name:
 # Description:
