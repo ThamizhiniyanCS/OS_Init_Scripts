@@ -217,6 +217,30 @@ install strace
 # Github Repository: https://github.com/aristocratos/btop
 install btop
 
+# Name: Starship
+# Description: The minimal, blazing-fast, and infinitely customizable prompt for any shell!
+# Website: https://starship.rs/
+# Github Repository: https://github.com/starship/starship
+curl -sS https://starship.rs/install.sh | sh
+
+# Name: uv
+# Description: An extremely fast Python package and project manager, written in Rust.
+# Website: https://docs.astral.sh/uv/
+# Github Repository: https://github.com/astral-sh/uv
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Name: Bun
+# Description: Incredibly fast JavaScript runtime, bundler, test runner, and package manager – all in one
+# Website: https://bun.com/
+# Github Repository: https://github.com/oven-sh/bun
+curl -fsSL https://bun.sh/install | bash
+
+# Name: fnm
+# Description: Fast and simple Node.js version manager, built in Rust
+# Website:
+# Github Repository: https://github.com/Schniz/fnm
+curl -fsSL https://fnm.vercel.app/install | bash
+
 # Name:
 # Description:
 # Website:

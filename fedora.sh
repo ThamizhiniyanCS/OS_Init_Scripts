@@ -120,8 +120,20 @@ install fzf
 # Description: Simple terminal UI for git commands
 # Website:
 # Github Repository: https://github.com/jesseduffield/lazygit
-copr_enable atim/lazygit
+copr_enable dejan/lazygit
 install lazygit
+
+# Name: Lazydocker
+# Description: The lazier way to manage everything docker
+# Website:
+# Github Repository: https://github.com/jesseduffield/lazydocker
+curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
+
+# Name: eza
+# Description: A modern alternative to ls.
+# Website: https://eza.rocks/
+# Github Repository: https://github.com/eza-community/eza
+cargo install eza
 
 # Name: ripgrep
 # Description: ripgrep recursively searches directories for a regex pattern while respecting your gitignore
@@ -286,6 +298,30 @@ install libva-nvidia-driver.{i686,x86_64}
 # Github Repository:
 install vlc
 # --- END: MULTIMEDIA STUFF ---
+
+# Name: Starship
+# Description: The minimal, blazing-fast, and infinitely customizable prompt for any shell!
+# Website: https://starship.rs/
+# Github Repository: https://github.com/starship/starship
+curl -sS https://starship.rs/install.sh | sh
+
+# Name: uv
+# Description: An extremely fast Python package and project manager, written in Rust.
+# Website: https://docs.astral.sh/uv/
+# Github Repository: https://github.com/astral-sh/uv
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Name: Bun
+# Description: Incredibly fast JavaScript runtime, bundler, test runner, and package manager – all in one
+# Website: https://bun.com/
+# Github Repository: https://github.com/oven-sh/bun
+curl -fsSL https://bun.sh/install | bash
+
+# Name: fnm
+# Description: Fast and simple Node.js version manager, built in Rust
+# Website:
+# Github Repository: https://github.com/Schniz/fnm
+curl -fsSL https://fnm.vercel.app/install | bash
 
 # Name:
 # Description:
