@@ -97,6 +97,10 @@ install gh --repo gh-cli
 install git-delta
 # --- END: GITHUB RELATED STUFF ---
 
+# --- START: OPENSSL RELATED STUFF ---
+install openssl openssl-devel
+# --- END: OPENSSL RELATED STUFF ---
+
 # --- START: NVIM RELATED STUFF ---
 # Name: Neovim
 # Description: Vim-fork focused on extensibility and usability
