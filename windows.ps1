@@ -15,6 +15,7 @@ $packages = @(
     "Microsoft.PowerToys",
     "Git.Git",
     "GitHub.CLI"
+    "LocalSend.LocalSend"
 )
 
 # --- Installation Loop ---
