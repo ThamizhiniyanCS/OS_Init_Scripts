@@ -1,21 +1,22 @@
 # Add or remove the Winget Package IDs in this array to customize your installation.
 $packages = @(
+    "7zip.7zip",
+    "Adobe.Acrobat.Reader.64-bit",
     "Brave.Brave",
+    "Discord.Discord",
+    "Flameshot.Flameshot",
+    "Git.Git",
+    "GitHub.CLI",
+    "Google.Chrome",
+    "Google.EarthPro",
+    "LocalSend.LocalSend",
+    "Microsoft.PowerToys",
     "OpenWhisperSystems.Signal",
+    "SumatraPDF.SumatraPDF",
     "Telegram.TelegramDesktop",
     "VSCodium.VSCodium",
-    "Adobe.Acrobat.Reader.64-bit",
-    "Flameshot.Flameshot",
     "VideoLAN.VLC",
-    "Google.Chrome",
-    "Discord.Discord",
-    "7zip.7zip",
     "qBittorrent.qBittorrent",
-    "Google.EarthPro",
-    "Microsoft.PowerToys",
-    "Git.Git",
-    "GitHub.CLI"
-    "LocalSend.LocalSend"
 )
 
 # --- Installation Loop ---
